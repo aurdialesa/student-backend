@@ -30,3 +30,7 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📍 Environment: ${process.env.NODE_ENV}`);
 });
+
+// Agregar después de las rutas de students
+const courseRoutes = require('./routes/courses');
+app.use('/api/courses', courseRoutes);
